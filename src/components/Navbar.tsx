@@ -5,7 +5,7 @@ const Navbar = () => {
   const [page, setPage] = useState(0);
 
   return (
-    <div className="shadow-md h-16 mb-3 w-full flex place-content-between items-center px-6 bg-white">
+    <div className="shadow-md h-16 mb-3 w-full flex place-content-between items-center px-6 bg-white sticky">
       <ul className="flex content-center items-cente place-content-between">
         <li
           className={page === 0 ? "mr-6 font-medium" : "mr-6"}
@@ -26,7 +26,7 @@ const Navbar = () => {
           <Link to="/store">Store</Link>
         </li>
       </ul>
-      <button className="w-12 h-12 border-2 border-gray-300">
+      <button className="w-12 h-12 border-2 border-gray-300 relative">
         <svg
           fill="#000000"
           viewBox="0 0 24 24"
@@ -71,6 +71,9 @@ const Navbar = () => {
             ></path>
           </g>
         </svg>
+        <div className="bg-red-500 rounded-full text-white w-6 h-6 absolute right-0 bottom-0 translate-x-2 translate-y-2">
+          0
+        </div>
       </button>
     </div>
   );
