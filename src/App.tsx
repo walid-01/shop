@@ -5,10 +5,11 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Store from "./pages/Store";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 function App() {
   return (
-    <>
+    <ShoppingCartProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +17,7 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </ShoppingCartProvider>
   );
 }
 
